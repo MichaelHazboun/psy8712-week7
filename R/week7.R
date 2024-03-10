@@ -19,9 +19,9 @@ week7_tbl <- read_csv("../data/week3.csv", col_names = T) %>%
 
 
 # Visualization
-week7_tbl %>% 
-  select(c(q1:q5,q7:q10)) %>% 
+select(week7_tbl,c(q1:q10)) %>% 
   ggpairs
+
 (ggplot(week7_tbl,aes(x=timeStart,y=q1))+
   geom_point()+
   labs(x="Date of Experiment",y="Q1 Score")) %>%
