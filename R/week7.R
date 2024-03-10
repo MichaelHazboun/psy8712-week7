@@ -51,7 +51,7 @@ week7_tbl %>%
     geom_smooth(method = "lm", se=F)+
     labs(x="Score on Q5",y="Score on Q7",color="Experimental Condition")+
     theme(legend.position = "bottom",
-          legend.background = element_rect(fill="gray87")))%>%
+          legend.background = element_rect(fill=gray(0.875))))%>%
   ggsave("../figs/fig5.png",.,height = 3,width = 6,dpi=600)
   
     
