@@ -11,8 +11,8 @@ week7_tbl <- read_csv("../data/week3.csv", col_names = T) %>%
   filter(q6==1) %>%
   select(-q6)%>%
   mutate(timeSpent=as.numeric(timeEnd-timeStart)) %>%
-  mutate(condition=factor(condition, c("A","B","C"),c("Block A", "Block B", "Control"))) %>%
-  mutate(gender= factor(gender, c("M","F"),c("Male","Female")))
+  mutate(condition=recode_factor(condition, "A" = "Block A", "B" = "Block B", "C" = "Control")) %>%
+  mutate(gender = recode_factor(gender,"M" = "Male", "F" = "Female"))
 
 
 
